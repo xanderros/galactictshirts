@@ -1,0 +1,9 @@
+ProjectTitle: Galactictshirts
+
+PageList:
+- file: checkout.html
+- file: checkout-no-img.html
+- file: checkout-edit.html
+- file: checkout-credit-card.html
+- file: invoice.html
+- file: confirmation.html

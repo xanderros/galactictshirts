@@ -1,0 +1,56 @@
+//*** --- Paths --- *** //
+$imgPath: '../img';
+$fontPath: '../fonts';
+
+//*** --- Colors --- *** //
+
+// site colors
+$white: #fff;
+$black: #363639;
+$blue: #1d83ff;
+$gray: #7F7F85;
+$gray-light: #F6F6F6;
+$gray-icon: #A9A9A9;
+
+// text colors
+$text-color: $black;
+
+// other
+$line-color: #F3F3F3;
+
+//*** --- Typography --- *** //
+
+// basic typography
+$gordita: 'Gordita', sans-serif;
+$font-family: $gordita;
+$font-size: 14px;
+$line-height: 1;
+
+//*** --- Layout --- *** //
+
+// breakpoints
+$screen-xs: 374px;
+$screen-sm: 576px;
+$screen-md: 767px;
+$screen-lg: 992px;
+$screen-xl: 1199px;
+
+// widths
+$width: 1000px;
+
+//*** --- Transitions --- *** //
+/* default for most elements */
+$transition-time: 0.3s;
+$transition-style: ease;
+$transition: 0.3s ease;
+$transition-header: 0.5s ease;
+
+//*** --- Form settings --- *** //
+
+$form-error-border: #e00;
+$form-error-text: #e00;
+$form-border: $gray-light;
+$form-border-hover: #a6a6a6;
+$form-border-focus: #ddd;
+$form-disabled-text: #eee;
+$form-height: 50px;

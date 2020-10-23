@@ -1,0 +1,67 @@
+/* print */
+@media print {
+  *, *:before, *:after, *:first-letter, p:first-line, div:first-line, blockquote:first-line, li:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .wrapper {
+    padding: 20px 0 0!important;
+    max-width: 100%!important;
+
+    &__content {
+      padding: 0!important;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+  .header {
+    position: relative;
+    margin-bottom: 43px;
+
+    &.is-sticky {
+      padding-top: 3px;
+
+      &:after {
+        content: none;
+      }
+
+      .header {
+        &__logo {
+          max-height: 102px;
+        }
+        &__base,
+        &__side {
+          transform: none;
+        }
+        &__desc {
+          margin-top: 2px;
+        }
+        &__info {
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+
+  .pay,
+  .edit,
+  .caption__icons,
+  .form__btn,
+  .message__icon,
+  .footer {
+    display: none;
+  }
+  .bottom_pay,
+  .message {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .product,
+  .bottom {
+    page-break-inside: avoid;
+  }
+}

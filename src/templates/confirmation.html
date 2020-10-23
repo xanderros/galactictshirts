@@ -1,0 +1,193 @@
+---
+title: Galactictshirts | Confirmation
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="wrapper">
+  <main class="wrapper__content">
+
+    <div class="message">
+      <div class="message__side">
+        <svg class="message__icon" width="104" height="104">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-check"></use>
+        </svg>
+      </div>
+      <div class="message__base">
+        <div class="message__title">Thank you for your payment!</div>
+        <div class="message__text">
+          We have received your order and are getting it ready for delivery.
+          We will notify you by text when its on way
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="caption caption_v-align_center">
+        <div class="caption__content">
+          <div class="heading">Your order details</div>
+        </div>
+        <div class="caption__side">
+          <div class="caption__icons">
+            <a href="#" class="icon-btn icon-btn_text">
+              <img class="icon-btn__img" src="img/invoice.png" srcset="img/invoice@2x.png 2x" alt="View invoice">
+              <span class="icon-btn__text">View invoice</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="products">
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="R1 T-shirt White">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">R1 T-shirt White</h3>
+            <div class="product__desc">White T-shirts, 100% cotton, with special discount</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">10</div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="R1 Shoes White">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">R1 Shoes White</h3>
+            <div class="product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">2</div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="3-Stripes Leggings">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">3-Stripes Leggings</h3>
+            <div class="product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">13</div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bottom__base">
+          <div class="customer customer_name">
+            <div class="customer__title">Customer</div>
+            <div class="customer__container">
+              <div class="customer__content">
+                <span class="customer__text">Matt Conner</span>
+              </div>
+            </div>
+          </div>
+          <div class="customer">
+            <div class="customer__title">Shipping address</div>
+            <div class="customer__container">
+              <div class="customer__content">
+                <span class="customer__text">1, The Avenue Hillsgate HL20 4ER UK</span>
+              </div>
+            </div>
+          </div>
+          <div class="customer">
+            <div class="customer__title">Business name</div>
+            <div class="customer__container">
+              <div class="customer__content">
+                <span class="customer__text">UXLab Inc</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__side">
+          <div class="price">
+
+            <div class="price__title">Subtotal</div>
+            <div class="price__cell">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">135.00</div>
+              </div>
+            </div>
+
+            <div class="price__title">Delivery</div>
+            <div class="price__cell">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">15.00</div>
+              </div>
+            </div>
+
+            <div class="price__title price__title_total">Total</div>
+            <div class="price__cell price__cell_total">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">150.00</div>
+              </div>
+              <div class="price__note">(inc VAT)</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  {% include "partials/footer.html" %}
+</div>
+
+{% endblock %}

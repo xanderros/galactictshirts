@@ -1,0 +1,32 @@
+// This unit is responsible for the typography of the project.
+// Do not write here any third-party styling.
+
+/* Gordita Regular */
+@font-face {
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  src: local('☺'),
+  url('#{$fontPath}/Gordita-Regular.woff2') format('woff2'),
+  url('#{$fontPath}/Gordita-Regular.woff') format('woff');
+}
+
+/* Gordita Medium */
+@font-face {
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 500;
+  src: local('☺'),
+  url('#{$fontPath}/Gordita-Medium.woff2') format('woff2'),
+  url('#{$fontPath}/Gordita-Medium.woff') format('woff');
+}
+
+/* Gordita Bold */
+@font-face {
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 700;
+  src: local('☺'),
+  url('#{$fontPath}/Gordita-Bold.woff2') format('woff2'),
+  url('#{$fontPath}/Gordita-Bold.woff') format('woff');
+}

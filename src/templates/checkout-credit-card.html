@@ -1,0 +1,557 @@
+---
+title: Galactictshirts | Checkout
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="wrapper">
+  <main class="wrapper__content">
+
+    {% include "partials/header.html" %}
+
+    <div class="box">
+      <div class="customer customer_name">
+        <div class="customer__title">Customer</div>
+        <div class="customer__container">
+          <div class="customer__content">
+            <span class="customer__text">Matt Conner</span>
+            <span class="customer__edit edit">
+            <svg class="edit__icon" width="16" height="16">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-edit"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="customer__collapse">
+            <form class="form">
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input" type="text" value="Matt Conner">
+                </div>
+              </div>
+              <div class="form__bottom">
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_light">Cancel</button>
+                </div>
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_color">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="customer">
+        <div class="customer__title">Shipping address</div>
+        <div class="customer__container">
+          <div class="customer__content">
+            <span class="customer__text">1, The Avenue Hillsgate HL20 4ER UK</span>
+            <span class="customer__edit edit">
+            <svg class="edit__icon" width="16" height="16">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-edit"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="customer__collapse">
+            <form class="form">
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input" type="text" placeholder="Address 1" value="1, The Avenue Hillsgate HL20 4ER  UK">
+                  <div class="form__error-message">Please enter your Address</div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input" type="text" placeholder="Address 2">
+                </div>
+              </div>
+              <div class="form__row form__grid form__grid_2">
+                <div class="form__cell">
+                  <div class="form__control">
+                    <input class="form__input" type="text" placeholder="City">
+                  </div>
+                </div>
+                <div class="form__cell">
+                  <div class="form__control">
+                    <input class="form__input" type="text" placeholder="Country">
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input" type="tel" placeholder="Postal Code">
+                </div>
+              </div>
+              <div class="form__bottom">
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_light">Cancel</button>
+                </div>
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_color">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="customer">
+        <div class="customer__title">Business name</div>
+        <div class="customer__container">
+          <div class="customer__content">
+            <span class="customer__text">UXLab Inc</span>
+            <span class="customer__edit edit">
+            <svg class="edit__icon" width="16" height="16">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-edit"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="customer__collapse">
+            <form class="form">
+              <div class="form__row">
+                <div class="form__control">
+                  <input class="form__input" type="text" placeholder="Business name" value="UXLab Inc">
+                  <div class="form__error-message">Please enter your Business name</div>
+                </div>
+              </div>
+              <div class="form__bottom">
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_light">Cancel</button>
+                </div>
+                <div class="form__btn">
+                  <button type="submit" class="btn btn_color">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="caption">
+        <div class="caption__content">
+          <h2 class="title">Checkout</h2>
+          <time class="time" datetime="2019-07-20 15:45">20th July 2019 at 3.45pm</time>
+        </div>
+      </div>
+      <div class="products">
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="R1 T-shirt White">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">R1 T-shirt White</h3>
+            <div class="product__desc">White T-shirts, 100% cotton, with special discount</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">
+                <div class="qty">
+                  <button class="qty__btn qty__btn_minus"></button>
+                  <span class="qty__value">10</span>
+                  <button class="qty__btn qty__btn_plus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="R1 Shoes White">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">R1 Shoes White</h3>
+            <div class="product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">
+                <div class="qty">
+                  <button class="qty__btn qty__btn_minus"></button>
+                  <span class="qty__value">2</span>
+                  <button class="qty__btn qty__btn_plus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__side">
+            <div class="product__img-wrap">
+              <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="3-Stripes Leggings">
+            </div>
+          </div>
+          <div class="product__box">
+            <h3 class="product__title">3-Stripes Leggings</h3>
+            <div class="product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </div>
+          <div class="product__grid info">
+            <div class="info__column info__column_id">
+              <div class="info__title">Product ID</div>
+              <div class="info__value">82372</div>
+            </div>
+            <div class="info__column info__column_qty">
+              <div class="info__title">Qty</div>
+              <div class="info__value">
+                <div class="qty">
+                  <button class="qty__btn qty__btn_minus"></button>
+                  <span class="qty__value">13</span>
+                  <button class="qty__btn qty__btn_plus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="info__column info__column_discount">
+              <div class="info__title">Discount 10%</div>
+              <div class="info__value info__value_discount">£15.00</div>
+            </div>
+            <div class="info__column info__column_price">
+              <div class="info__title">Price</div>
+              <div class="info__value">£135.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bottom__base">
+          <div class="note">
+            <h4 class="note__title">Note</h4>
+            <div class="note__content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__side">
+          <div class="price">
+
+            <div class="price__title">Subtotal</div>
+            <div class="price__cell">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">135.00</div>
+              </div>
+            </div>
+
+            <div class="price__title">Delivery</div>
+            <div class="price__cell">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">15.00</div>
+              </div>
+            </div>
+
+            <div class="price__title price__title_total">Total</div>
+            <div class="price__cell price__cell_total">
+              <div class="price__row">
+                <span class="price__symbol">£</span>
+                <div class="price__value">150.00</div>
+              </div>
+              <div class="price__note">(inc VAT)</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stripe Payments (start) -->
+    <div class="pay">
+
+      <script src="https://js.stripe.com/v3"></script>
+      <div class="payment-container">
+        <!-- Payment Request Button -->
+        <div id="paymentRequestButton" style="display: none;"></div>
+
+        <!-- Stripe Elements -->
+        <form id="paymentElementsForm" style="display: none;">
+          <input type="hidden" name="businessId" value="kuuzvtrouvlq"/>
+          <input type="hidden" name="invoiceId" value="ci6b4i489351k33pn8p2"/>
+          <div class="form-row">
+            <label for="card-element">Credit or debit card</label>
+            <div id="card-element"></div>
+            <div id="card-errors" role="alert"></div>
+          </div>
+          <button id="paymentElementsButton">Pay Now</button>
+        </form>
+      </div>
+      <!-----------------------------------------------
+! Copyright 2018,2020 Converso LTD             !
+! Copyright 2018,2020 Gianluca Bonetti @author !
+!----------------------------------------------->
+
+
+      <script type="text/javascript">
+		  console.log("Session intentId is pi_1G3ULyHDGmDlVwcuisjAcGvk");
+
+		  var stripe = Stripe("pk_live_WTW2PUqfhDib3afqknVEipAa", {
+			  stripeAccount: "acct_1DADQMHDGmDlVwcu"
+		  });
+
+      var elements = stripe.elements({
+        fonts: [
+          {
+          	cssSrc: "https://fonts.googleapis.com/css?family=Roboto",
+            family: "Roboto",
+          }
+        ]
+      });
+
+
+	  var paymentRequest = stripe.paymentRequest({
+			  country: "GB",
+			  currency: "gbp",
+			  total: {
+				  label: "Checkout GBP 0.52",
+				  amount: 52,
+			  },
+			  requestPayerName: true,
+			  requestPayerEmail: true,
+			  requestShipping: true,
+			  shippingOptions: [
+				  {id: "DELIVERY", label: "Standard Delivery", detail: "Standard Delivery Method", amount: 0},
+			  ]
+		  });
+
+		  // Check the availability of the Payment Request API first.
+		  paymentRequest.canMakePayment().then(function (result) {
+			  if (result) {
+				  // We have Payment Request APIs, log some debug information
+				  console.log("Payment Request APIs are available.")
+
+				  // Enable Payment Request APIs
+				  var button = document.getElementById("paymentRequestButton");
+				  button.style.display = "block";
+
+				  // Create an instance of the card Payment Request Button
+				  var paymentRequestButton = elements.create("paymentRequestButton", {
+					  paymentRequest: paymentRequest,
+				  });
+
+				  // Add the instance of the Payment Request Button into the 'paymentRequestButton' <button> widget
+				  paymentRequestButton.mount("#paymentRequestButton");
+			  } else {
+				  // We use Stripe Elements as fallback, log some debug information
+				  console.log("Payment Request APIs are NOT available.")
+
+				  // Enable Stripe Elements Form
+				  var button = document.getElementById("paymentElementsButton");
+				  var form = document.getElementById("paymentElementsForm");
+				  form.style.display = "block";
+
+				  // Elements styling
+				  var style = {
+					  base: {
+						  fontFamily: "Roboto, sans-serif",
+						  fontWeight: "400",
+						  color: "#363639",
+						  fontSize: "14px",
+				      fontSmoothing: "antialiased",
+						  "::placeholder": {
+							  color: "#aeaeb0"
+						  }
+					  },
+					  invalid: {
+						  color: "#e00",
+						  iconColor: "#e00"
+					  }
+				  };
+
+          // Dynamically change the styles of an element
+          window.addEventListener("load", function(event) {
+            if (window.innerWidth <= 374) {
+              card.update({style: {base: {fontSize: '13px'}}});
+            } else {
+              card.update({style: {base: {fontSize: '14px'}}});
+            }
+          });
+          window.addEventListener("resize", function(event) {
+            if (window.innerWidth <= 374) {
+              card.update({style: {base: {fontSize: '13px'}}});
+            } else {
+              card.update({style: {base: {fontSize: '14px'}}});
+            }
+          });
+
+				  // Create an instance of the card Element
+				  var card = elements.create("card", {style: style});
+
+				  // Add an instance of the card Element into the 'card-element' <div> widget
+				  card.mount("#card-element");
+
+				  // Handle real-time validation errors from the card Element.
+				  card.addEventListener("change", function (event) {
+					  var displayError = document.getElementById("card-errors");
+					  if (event.error) {
+						  displayError.textContent = event.error.message;
+					  } else {
+						  displayError.textContent = "";
+					  }
+				  });
+
+				  // Handle form submission.
+
+				  form.addEventListener("submit", function (event) {
+					  event.preventDefault();
+
+					  button.disabled = true;
+					  setTimeout(function () {
+						  button.disabled = false;
+					  }, 1500);
+
+					  stripe.confirmCardPayment("pi_1G3ULyHDGmDlVwcuisjAcGvk_secret_XASVFVxQyF36ccmVAu1CB2ARU", {
+						  payment_method: {
+							  card: card,
+						  }
+					  }).then(function (result) {
+						  if (result.error) {
+							  // Show error to the customer (e.g. insufficient funds)
+							  // TODO: more fancy error dialog
+							  alert(result.error.message);
+						  } else {
+							  // The payment has been processed successfully
+							  if (result.paymentIntent.status === "succeeded") {
+								  conversoStripePayments("https://stagingpayments.converso.io/stripeElementsSuccess/", result.paymentIntent.id)
+
+								  // TODO: from Stripe documentation
+								  //    There's a risk of the customer closing the window before callback execution.
+								  //    Set up a webhook or plugin to listen for the payment_intent.succeeded event
+								  //    that handles any business critical post-payment actions.
+							  }
+						  }
+					  });
+				  });
+			  }
+		  });
+
+		  // Payment Request APIs confirm
+		  paymentRequest.on("paymentmethod", function (event) {
+			  conversoStripePayments("https://stagingpayments.converso.io/stripePaymentSuccess/", event.paymentMethod.id);
+		  });
+
+		  function conversoStripePayments(endpoint, payload) {
+			  console.log("POST success for " + payload + " to " + endpoint);
+
+			  fetch(endpoint, {
+				  method: "POST",
+				  headers: {
+					  "Content-Type": "application/json"
+				  },
+				  body: JSON.stringify({
+					  payment_intent_id: payload,
+					  businessId: "kuuzvtrouvlq",
+					  invoiceId: "ci6b4i489351k33pn8p2"
+				  })
+			  }).then(function (result) {
+				  // Handle server result (see Step 3)
+				  result.json().then(function (json) {
+					  handleServerResponse(json, function (value) {
+						  console.log(value);
+						  location.reload();
+					  });
+				  });
+			  });
+		  }
+
+		  function handleServerResponse(result, complete) {
+			  if (result.error) {
+				  complete("fail");
+			  } else if (result.requires_action) {
+				  complete("success");
+				  handleAction(result);
+			  } else {
+				  complete("success");
+			  }
+		  }
+
+		  function handleAction(result) {
+			  stripe.handleCardAction(result.payment_intent_client_secret).then(function (result) {
+				  if (result.error) {
+					  // Show error in payment form
+				  } else {
+					  // The card action has been handled
+					  // The PaymentIntent can be confirmed again on the server
+					  fetch("/stripePaymentSuccess/", {
+						  method: "POST",
+						  headers: {
+							  "Content-Type": "application/json"
+						  },
+						  body: JSON.stringify({
+							  payment_intent_id: event.paymentMethod.id,
+							  businessId: "kuuzvtrouvlq",
+							  invoiceId: "ci6b4i489351k33pn8p2"
+						  })
+					  }).then(function (confirmResult) {
+						  return confirmResult.json();
+					  }).then(handleServerResponse);
+				  }
+			  });
+		  }
+
+		  // Asynchronous via webhook (not working)
+		  // 	paymentRequest.on("paymentmethod", function(event) {
+		  // 		// First, confirm the PaymentIntent to see if there are any payment errors
+		  // 			stripe.confirmPaymentIntent("",
+		  //				{ payment_method : event.paymentMethod.id },
+		  // 				{ handleActions  : false }
+		  // 			).then(function(confirmResult) {
+		  // 				if( confirmResult.error ) {
+		  // 					// Complete with "fail" and show error
+		  // 					event.complete("fail");
+		  // 				} else {
+		  // 					// Otherwise, close the Payment Request odal and call handleCardPayment
+		  // 					// to complete any potential actions required.
+		  // 					event.complete("success");
+		  // 					// Let Stripe.js handle the rest of the payment flow.
+		  // 					stripe.handleCardPayment("").then(function(result) {
+		  // 						if( result.error ) {
+		  // 						    // Handle error here
+		  // 						  } else if( result.paymentIntent && result.paymentIntent.status === "succeeded" ) {
+		  // 						    // Handle successful payment here
+		  // 						  }
+		  // 					});
+		  // 				}
+		  // 			});
+		  // 		}
+		  // 	);
+      </script>
+
+    </div>
+    <!-- Stripe Payments (end) -->
+
+  </main>
+  {% include "partials/footer.html" %}
+</div>
+
+{% endblock %}
