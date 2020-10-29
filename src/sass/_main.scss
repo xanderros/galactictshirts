@@ -1,8 +1,9 @@
 /** page layout **/
 .wrapper {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 80px;
   width: 100%;
   height: 100%;
   max-width: $width;
@@ -13,7 +14,7 @@
   &__content {
     flex: 1 0 auto;
     position: relative;
-    padding: 50px 60px;
+    padding: 35px 60px 0;
     background-color: $white;
     border-radius: 6px;
     box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.04);
@@ -23,13 +24,13 @@
     padding-top: 6%;
   }
   @media screen and (max-width: 1100px) {
-    padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
     max-width: 100%;
 
     &__content {
-      padding: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
   @media screen and (max-width: $screen-lg) {
@@ -38,26 +39,28 @@
     padding-right: 40px;
 
     &__content {
-      padding: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
   @media screen and (max-width: $screen-md) {
     padding: 0;
 
     &__content {
-      padding: 30px 25px 10px;
+      padding: 30px 25px 0;
       border-radius: 0;
       box-shadow: none;
     }
   }
   @media screen and (max-width: $screen-sm) {
     &__content {
-      padding: 17px 20px 0;
+      padding: 24px 20px 0;
     }
   }
   @media screen and (max-width: 360px) {
     &__content {
-      padding: 12px 15px 0;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
@@ -87,10 +90,63 @@
 }
 
 .box {
-  margin-bottom: 43px;
+  padding-top: 42px;
+  margin-bottom: 40px;
+  border-top: 1px solid $line-color;
 
+  @media screen and (max-width: $screen-md) {
+    padding-top: 34px;
+    margin-bottom: 34px;
+  }
   @media screen and (max-width: $screen-sm) {
+    padding-top: 27px;
     margin-bottom: 27px;
+  }
+}
+.total {
+  text-align: center;
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 29px;
+  }
+  &__price {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+  &__time {
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    &__title {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    &__price {
+      font-size: 35px;
+    }
+    &__time {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    &__title {
+      font-size: 12px;
+    }
+    &__price {
+      font-size: 26px;
+    }
+    &__time {
+      margin-top: 10px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -107,44 +163,26 @@
   background-color: $white;
   padding-top: 3px;
   z-index: 1000;
-  margin-bottom: 57px;
+  margin-bottom: 43px;
   position: sticky;
   top: 0;
   transition: padding-top $transition-header;
 
+  + .box {
+    border-top: none;
+  }
+
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
     right: 0;
-    height: 12px;
+    transform: translateY(37px);
+    height: 40px;
     background-color: $white;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color $transition-header, bottom $transition-header;
-    margin-left: -60px;
-    margin-right: -60px;
-
-    @media screen and (max-width: 1100px) {
-      margin-left: -50px;
-      margin-right: -50px;
-    }
-    @media screen and (max-width: $screen-lg) {
-      margin-left: -40px;
-      margin-right: -40px;
-    }
-    @media screen and (max-width: $screen-md) {
-      margin-left: -25px;
-      margin-right: -25px;
-    }
-    @media screen and (max-width: $screen-sm) {
-      margin-left: -20px;
-      margin-right: -20px;
-    }
-    @media screen and (max-width: 360px) {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
+    border-bottom: 1px solid $line-color;
+    transition: left $transition-header, right $transition-header, transform $transition-header;
   }
 
   &__base {
@@ -172,7 +210,7 @@
     line-height: 1.4;
   }
   &__desc {
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 17px;
     line-height: 1.5;
     transition: margin-top $transition-header;
@@ -188,7 +226,30 @@
     padding-top: 0;
 
     &:after {
-      border-bottom-color: $line-color;
+      left: -60px;
+      right: -60px;
+      transform: translateY(0);
+
+      @media screen and (max-width: 1100px) {
+        left: -50px;
+        right: -50px;
+      }
+      @media screen and (max-width: $screen-lg) {
+        left: -40px;
+        right: -40px;
+      }
+      @media screen and (max-width: $screen-md) {
+        left: -25px;
+        right: -25px;
+      }
+      @media screen and (max-width: $screen-sm) {
+        left: -20px;
+        right: -20px;
+      }
+      @media screen and (max-width: 360px) {
+        left: -15px;
+        right: -15px;
+      }
     }
 
     .header {
@@ -246,11 +307,12 @@
   }
   @media screen and (max-width: $screen-sm) {
     padding-top: 1px;
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 
     &:after {
-      bottom: -14px;
-      border-bottom-color: $line-color;
+      height: 24px;
+      bottom: -1px;
+      transform: translateY(24px);
     }
     &__logo {
       max-height: 70px;
@@ -272,9 +334,6 @@
     }
 
     &.is-sticky {
-      &:after {
-        bottom: 0;
-      }
       .header {
         &__logo {
           max-height: 54px;
@@ -300,9 +359,6 @@
   }
 
   @media screen and (max-width: 360px) {
-    &:after {
-      bottom: -12px;
-    }
     &__logo {
       max-height: 58px;
       max-width: 72px;
@@ -344,7 +400,7 @@
   padding: 19px 20px 15px;
   margin: 0;
   border: none;
-  color: $black;
+  color: $dark;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -393,7 +449,7 @@
     letter-spacing: normal;
     font-weight: 500;
     padding: 15px 30px 11px;
-    background-color: #000;
+    background-color: $black;
     color: $white;
   }
   &_pay {
@@ -402,9 +458,9 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    width: 260px;
-    height: 75px;
-    background-color: #000;
+    width: 300px;
+    height: 72px;
+    background-color: $black;
     border-radius: 8px;
     color: $white;
     transition: transform $transition, box-shadow $transition;
@@ -422,10 +478,12 @@
 
     &_pay {
       padding: 0 20px;
-      height: 55px;
+      width: 100%;
+      max-width: 335px;
+      height: 46px;
 
       .btn__icon {
-        height: 43px;
+        height: 21px;
         width: auto;
       }
     }
@@ -434,6 +492,11 @@
       font-size: 14px;
       line-height: 19px;
       padding: 15px 30px 11px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    &_pay {
+      max-width: 100%;
     }
   }
 }
@@ -484,7 +547,7 @@
   display: flex;
   align-items: flex-end;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   &__content {
     flex: 1;
@@ -515,7 +578,7 @@
     }
   }
   @media screen and (max-width: $screen-sm) {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 
     &__img {
       width: 108px;
@@ -539,8 +602,8 @@
 
 /* text elements */
 .title {
-  font-size: 38px;
-  line-height: 1.2;
+  font-size: 34px;
+  line-height: 1.5;
   font-weight: bold;
   @include break-word;
 
@@ -553,14 +616,14 @@
   }
 
   @media screen and (max-width: $screen-md) {
-    font-size: 32px;
+    font-size: 26px;
 
     + .time {
       margin-top: 10px;
     }
   }
   @media screen and (max-width: $screen-sm) {
-    font-size: 21px;
+    font-size: 16px;
 
     + .time {
       margin-top: 8px;
@@ -590,7 +653,7 @@
   line-height: 1.5;
   font-weight: 500;
   margin-bottom: 4px;
-  color: #7F7F85;
+  color: $gray;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 
@@ -609,35 +672,6 @@
   }
 }
 
-.note {
-  &__title {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 5px;
-  }
-  &__content {
-    font-size: 14px;
-    line-height: 1.8;
-    color: $gray;
-
-    p {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  @media screen and (max-width: $screen-xs) {
-    &__title {
-      font-size: 15px;
-    }
-    &__content {
-      font-size: 13px;
-    }
-  }
-}
-
 .link {
   color: $blue;
   text-decoration: none;
@@ -653,12 +687,12 @@
   }
   &__title {
     font-size: 10px;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     color: $gray;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.06em;
   }
   &__content {
     font-size: 0;
@@ -704,8 +738,8 @@
       margin-bottom: 10px;
     }
     &__title {
-      font-size: 8px;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+      letter-spacing: 0.04em;
     }
     &__text {
       font-size: 14px;
@@ -736,11 +770,16 @@
   grid-template-columns: 170px 1fr;
   grid-template-rows: auto 1fr;
   grid-column-gap: 29px;
-  border-top: 1px solid $line-color;
-  padding: 29px 0;
+  padding-bottom: 17px;
+
+  &:not(:first-child) {
+    padding-top: 17px;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid $line-color;
+  }
 
   &__side {
-    padding-top: 3px;
     grid-row-start: 1;
     grid-row-end: 3;
   }
@@ -757,18 +796,20 @@
     @include center;
   }
   &__grid {
-    margin-top: 13px;
+    margin-top: 9px;
   }
   &__title {
-    font-size: 21px;
-    line-height: 1.45;
-    font-weight: bold;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $gray;
   }
   &__desc {
     margin-top: 8px;
     font-size: 14px;
     line-height: 1.7;
-    color: $gray;
   }
   &_no-img {
     display: block;
@@ -783,10 +824,7 @@
     grid-column-gap: 23px;
 
     &__grid {
-      margin-top: 11px;
-    }
-    &__title {
-      font-size: 18px;
+      margin-top: 9px;
     }
     &__desc {
       margin-top: 7px;
@@ -797,19 +835,22 @@
   @media screen and (max-width: $screen-sm) {
     grid-template-columns: 85px 1fr;
     grid-column-gap: 18px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
+
+    &:not(:first-child) {
+      padding-top: 13px;
+    }
 
     &__grid {
       grid-column-start: 1;
       grid-column-end: 3;
-      margin-top: 13px;
+      margin-top: 9px;
     }
     &__box {
       padding-top: 2px;
     }
-    &__title {
-      font-size: 14px;
+    &__side {
+      padding-top: 2px;
     }
     &__desc {
       font-size: 10px;
@@ -830,26 +871,29 @@
     }
 
     &_id {
-      width: 58%;
+      width: 30%;
       padding-right: 32px;
+
+      .info__value {
+        @include break-word;
+        white-space: normal;
+      }
     }
     &_qty {
-      width: 22%;
+      flex: 1;
     }
     &_discount {
       width: 28%;
     }
     &_price {
-      flex: 1;
+      width: 95px;
     }
 
-    /* if 4 or more items */
-    &:nth-last-child(n+4) {
-      &.info__column {
-        &_id {
-          width: 30%;
-        }
-      }
+    /* if 3 items */
+    &:nth-last-child(3):first-child,
+    &:nth-last-child(3):first-child ~ .info__column_id,
+    &:nth-last-child(3):first-child ~ .info__column_qty {
+      width: 45%;
     }
   }
   &__title {
@@ -864,7 +908,7 @@
     margin-bottom: 5px;
   }
   &__value {
-    @include break-word;
+    white-space: nowrap;
     font-size: 17px;
     line-height: 1.2;
     font-weight: 500;
@@ -887,48 +931,36 @@
     }
 
     &__column {
-      &_id {
-        width: 56%;
-      }
       &_discount {
         width: 26%;
       }
-
-      /* if 4 or more items */
-      &:nth-last-child(n+4) {
-        &.info__column {
-          &_id {
-            width: 30%;
-          }
-        }
+      &_price {
+        width: 90px;
       }
     }
   }
   @media screen and (max-width: $screen-sm) {
-    max-width: 340px;
-
     &__column {
       &_id {
-        width: 59%;
+        width: 33%;
       }
       &_qty {
-        width: 18%;
+        width: 17%;
         padding-right: 2px;
       }
       &_discount {
         padding-right: 2px;
       }
+      &_price {
+        width: 70px;
+      }
       &:last-child {
         padding-right: 0;
       }
-
-      /* if 4 or more items */
-      &:nth-last-child(n+4) {
-        &.info__column {
-          &_id {
-            width: 33%;
-          }
-        }
+      &:nth-last-child(3):first-child,
+      &:nth-last-child(3):first-child ~ .info__column_id,
+      &:nth-last-child(3):first-child ~ .info__column_qty {
+        width: 46%;
       }
     }
     &__title {
@@ -946,22 +978,19 @@
     }
     &__column {
       &_id {
-        width: 59%;
+        width: 32%;
+      }
+      &_qty {
+        width: 18%;
       }
       &_discount {
         width: 27%;
       }
+      &_price {
+        width: 63px;
+      }
       &:last-child {
         padding-right: 0;
-      }
-
-      /* if 4 or more items */
-      &:nth-last-child(n+4) {
-        &.info__column {
-          &_id {
-            width: 32%;
-          }
-        }
       }
     }
   }
@@ -1105,127 +1134,125 @@
   }
 }
 
-.bottom {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  padding-top: 41px;
-  padding-bottom: 45px;
-  border-top: 1px solid $line-color;
-
-  &_pay {
-    border-bottom: 1px solid $line-color;
-  }
-
-  &__base {
-    flex: 1;
-    padding-right: 17%;
-  }
-  &__side {
-    width: 270px;
-    margin-left: auto;
-  }
-
-  @media screen and (max-width: $screen-lg) {
-    &__base {
-      padding-right: 60px;
-    }
-    &__side {
-      width: 220px;
-    }
-  }
-  @media screen and (max-width: $screen-sm) {
-    flex-direction: column;
-    padding-top: 33px;
-    padding-bottom: 0;
-    border-bottom: none;
-
-    &__base {
-      padding-right: 0;
-
-      + .bottom__side {
-        margin-top: 23px;
-        padding-top: 27px;
-        border-top: 1px solid $line-color;
-      }
-    }
-    &__side {
-      width: 100%;
-      margin-left: 0;
-
-      .price {
-        width: 242px;
-      }
-    }
-  }
-}
-
 /* total price */
 .price {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-row-gap: 18px;
   font-size: 21px;
-  line-height: 1.5;
+  line-height: 1.45;
+  width: 100%;//
 
   &__title {
     padding-right: 15px;
     color: $gray;
 
     &_total {
+      padding-top: 15px;
       font-weight: bold;
-      color: $black;
+      color: $dark;
     }
   }
   &__cell {
     font-weight: 500;
 
     &_total {
+      padding-top: 3px;
       font-weight: bold;
-      color: $black;
+      color: $dark;
+
+      .price__row {
+        font-size: 34px;
+      }
     }
   }
   &__row {
     display: flex;
-  }
-  &__value {
-    flex: 1;
+    justify-content: flex-end;
     text-align: right;
   }
   &__note {
     font-weight: normal;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: right;
   }
 
   @media screen and (max-width: $screen-lg) {
     grid-row-gap: 18px;
   }
-  @media screen and (max-width: $screen-sm) {
-    font-size: 17px;
-    grid-row-gap: 14px;
+  @media screen and (max-width: $screen-md) {
+    font-size: 19px;
+    grid-row-gap: 19px;
 
     &__note {
+      font-size: 12px;
+    }
+    &__title {
+      &_total {
+        padding-top: 8px;
+      }
+    }
+    &__cell {
+      &_total {
+        padding-top: 0;
+
+        .price__row {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    font-size: 17px;
+    grid-row-gap: 17px;
+
+    &__note {
+      margin-top: 2px;
       font-size: 11px;
+    }
+    &__title {
+      &_total {
+        padding-top: 2px;
+      }
+    }
+    &__cell {
+      &_total {
+        padding-top: 2px;
+
+        .price__row {
+          font-size: 21px;
+        }
+      }
     }
   }
 }
-
 
 .pay {
   position: sticky;
   bottom: 0;
   background-color: $white;
   z-index: 1100;
-  border-top: 1px solid $line-color;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  @include paddings;
-  margin: 50px -60px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   transition: border-top-color $transition;
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60px;
+    right: -60px;
+    height: 1px;
+    background-color: $line-color;
+    transition: left $transition, right $transition;
+  }
+
   &_bottom {
-    border-top-color: transparent;
+    &:before {
+      left: 0 !important;
+      right: 0 !important;
+    }
   }
 
   .btn {
@@ -1234,29 +1261,41 @@
   }
 
   @media screen and (max-width: 1100px) {
-    margin-left: -50px;
-    margin-right: -50px;
+    &:before {
+      left: -50px;
+      right: -50px;
+    }
   }
   @media screen and (max-width: $screen-lg) {
-    margin-top: 40px;
-    margin-left: -40px;
-    margin-right: -40px;
+    &:before {
+      left: -40px;
+      right: -40px;
+    }
   }
   @media screen and (max-width: $screen-md) {
-    margin-left: -25px;
-    margin-right: -25px;
+    padding-top: 34px;
+    padding-bottom: 34px;
+
+    &:before {
+      left: -25px;
+      right: -25px;
+    }
   }
   @media screen and (max-width: $screen-sm) {
-    border-top-color: $line-color;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 0;
-    margin-left: -20px;
-    margin-right: -20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 16px;
+
+    &:before {
+      left: -20px;
+      right: -20px;
+    }
   }
   @media screen and (max-width: 360px) {
-    margin-left: -15px;
-    margin-right: -15px;
+    &:before {
+      left: -15px;
+      right: -15px;
+    }
   }
 }
 
@@ -1457,7 +1496,7 @@
             &__icon {
               margin-top: -2px;
               margin-left: -3px;
-              fill: #7f7f85;
+              fill: $gray;
             }
           }
         }
@@ -1466,7 +1505,7 @@
         display: flex;
         align-items: center;
         min-width: 86px;
-        color: #7F7F85;
+        color: $gray;
         font-weight: 500;
         padding-top: 2px;
         padding-left: 15px;
@@ -1608,6 +1647,7 @@
 /* thank you message */
 .message {
   text-align: center;
+  padding-top: 10px;
   margin-bottom: 47px;
 
   &__side {
@@ -1641,6 +1681,8 @@
   }
 
   @media screen and (max-width: $screen-md) {
+    margin-bottom: 40px;
+
     &__base {
       max-width: 510px;
     }
@@ -1659,10 +1701,8 @@
   }
 
   @media screen and (max-width: $screen-sm) {
-    padding-top: 20px;
-    padding-bottom: 48px;
-    margin-bottom: 45px;
-    border-bottom: 1px solid $line-color;
+    padding-top: 15px;
+    margin-bottom: 35px;
 
     &__base {
       max-width: 448px;
@@ -1695,8 +1735,8 @@
 
 .footer {
   flex-shrink: 0;
-  padding-top: 38px;
-  padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 77px;
   text-align: center;
 
   &__icon {
@@ -1704,23 +1744,32 @@
     margin-right: auto;
   }
   &__text {
-    margin-top: 5px;
+    margin-top: 3px;
     font-size: 15px;
     line-height: 1.5;
-    letter-spacing: -.03em;
+    letter-spacing: -.035em;
     color: $gray;
   }
 
+  @media screen and (max-width: $screen-xl) {
+    padding-bottom: 6%;
+  }
+  @media screen and (max-width: 1100px) {
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: $screen-lg) {
+    padding-bottom: 40px;
+  }
   @media screen and (max-width: $screen-sm) {
-    padding-top: 15px;
-    padding-bottom: 7px;
+    padding-top: 24px;
+    padding-bottom: 23px;
 
     &__text {
       margin-top: 2px;
-      font-size: 10px;
+      font-size: 13px;
     }
     &__icon {
-      height: 15px;
+      height: 20px;
       width: auto;
     }
   }
@@ -1818,7 +1867,7 @@
     letter-spacing: normal;
     font-weight: 500;
     padding: 14px 30px 11px;
-    background-color: #000;
+    background-color: $black;
     color: $white;
     @include break-word;
     text-decoration: none;

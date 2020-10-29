@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 
 	if(typeof(pay) != 'undefined' && pay != null){
-		var bottom = document.querySelector('.bottom');
-		bottom.classList.add('bottom_pay');
+		// var bottom = document.querySelector('.bottom');
+		// bottom.classList.add('bottom_pay');
 
 		var payPoint = document.createElement('div');
 		payPoint.className = "point point_pay";

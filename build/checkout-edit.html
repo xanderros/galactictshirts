@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="stylesheet" media="all" href="css/style.css?v=61ea7ec3c826dbd419a310e04aeace97">
+    <link rel="stylesheet" media="all" href="css/style.css?v=3a8288c2394babe79e49305fb1d5022e">
     <!-- Favicons for all devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
@@ -34,8 +34,16 @@
             <!--</div>-->
           </div>
           <div class="header__side">
-            <!--<img class="header__logo" src="img/converso.jpg" alt="Converso">--><img class="header__logo" src="https://staging.converso.io:3000/uploads/business_logos/1581436397344_og.png" alt=""> </div>
+            <!--<img class="header__logo" src="img/converso.jpg" alt="Converso">--><img class="header__logo" src="https://staging.converso.io:3000/uploads/business_logos/1581436397344_og.png" alt="">
+            <!--<img class="header__logo" src="https://messages.converso.io:3000/uploads/business_logos/1581614945217_400dpiLogo.jpg" alt="">--></div>
         </header>
+        <div class="box">
+          <div class="total">
+            <div class="total__title">Total to pay</div>
+            <div class="total__price">£ 150.00</div>
+            <div class="total__time"> Requested on <time datetime="2020-10-10">10/10/20</time> </div>
+          </div>
+        </div>
         <div class="box">
           <div class="customer customer_name customer_opened">
             <div class="customer__title">Customer</div>
@@ -119,13 +127,13 @@
             </div>
           </div>
         </div>
-        <div class="section">
+        <div class="box">
           <div class="caption">
             <div class="caption__content">
               <h2 class="title">Checkout</h2> <time class="time" datetime="2019-07-20 15:45">20th July 2019 at 3.45pm</time> </div>
           </div>
           <div class="products">
-            <div class="product">
+            <div class="product product_no-img">
               <div class="product__side">
                 <div class="product__img-wrap"> <img class="product__img" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="R1 T-shirt White"> </div>
               </div>
@@ -146,15 +154,15 @@
                 </div>
                 <div class="info__column info__column_discount">
                   <div class="info__title">Discount 10%</div>
-                  <div class="info__value info__value_discount">£15.00</div>
+                  <div class="info__value info__value_discount">£ 15.00</div>
                 </div>
                 <div class="info__column info__column_price">
                   <div class="info__title">Price</div>
-                  <div class="info__value">£135.00</div>
+                  <div class="info__value">£ 135.00</div>
                 </div>
               </div>
             </div>
-            <div class="product">
+            <div class="product product_no-img">
               <div class="product__side">
                 <div class="product__img-wrap"> <img class="product__img" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="R1 Shoes White"> </div>
               </div>
@@ -175,15 +183,15 @@
                 </div>
                 <div class="info__column info__column_discount">
                   <div class="info__title">Discount 10%</div>
-                  <div class="info__value info__value_discount">£15.00</div>
+                  <div class="info__value info__value_discount">£ 15.00</div>
                 </div>
                 <div class="info__column info__column_price">
                   <div class="info__title">Price</div>
-                  <div class="info__value">£135.00</div>
+                  <div class="info__value">£ 135.00</div>
                 </div>
               </div>
             </div>
-            <div class="product">
+            <div class="product product_no-img">
               <div class="product__side">
                 <div class="product__img-wrap"> <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="3-Stripes Leggings"> </div>
               </div>
@@ -204,52 +212,41 @@
                 </div>
                 <div class="info__column info__column_discount">
                   <div class="info__title">Discount 10%</div>
-                  <div class="info__value info__value_discount">£15.00</div>
+                  <div class="info__value info__value_discount">£ 15.00</div>
                 </div>
                 <div class="info__column info__column_price">
                   <div class="info__title">Price</div>
-                  <div class="info__value">£135.00</div>
+                  <div class="info__value">£ 135.00</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bottom">
-            <div class="bottom__base">
-              <div class="note">
-                <h4 class="note__title">Note</h4>
-                <div class="note__content">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. </p>
+          <div class="box">
+            <div class="price">
+              <div class="price__title">Subtotal</div>
+              <div class="price__cell">
+                <div class="price__row"> <span class="price__symbol">£&nbsp;</span>
+                  <div class="price__value">135.00</div>
                 </div>
               </div>
-            </div>
-            <div class="bottom__side">
-              <div class="price">
-                <div class="price__title">Subtotal</div>
-                <div class="price__cell">
-                  <div class="price__row"> <span class="price__symbol">£</span>
-                    <div class="price__value">135.00</div>
-                  </div>
+              <div class="price__title">Delivery</div>
+              <div class="price__cell">
+                <div class="price__row"> <span class="price__symbol">£&nbsp;</span>
+                  <div class="price__value">15.00</div>
                 </div>
-                <div class="price__title">Delivery</div>
-                <div class="price__cell">
-                  <div class="price__row"> <span class="price__symbol">£</span>
-                    <div class="price__value">15.00</div>
-                  </div>
+              </div>
+              <div class="price__title price__title_total">Total</div>
+              <div class="price__cell price__cell_total">
+                <div class="price__row"> <span class="price__symbol">£&nbsp;</span>
+                  <div class="price__value">150.00</div>
                 </div>
-                <div class="price__title price__title_total">Total</div>
-                <div class="price__cell price__cell_total">
-                  <div class="price__row"> <span class="price__symbol">£</span>
-                    <div class="price__value">150.00</div>
-                  </div>
-                  <div class="price__note">(inc VAT)</div>
-                </div>
+                <div class="price__note">(inc VAT)</div>
               </div>
             </div>
           </div>
         </div>
         <div class="pay"> <a href="#" class="btn btn_pay">
-        <svg class="btn__icon" width="107" height="67">
+        <svg class="btn__icon" width="99" height="38">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-apple-pay"></use>
         </svg>
       </a> </div>
@@ -262,7 +259,7 @@
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script src="js/script.js?v=61ea7ec3c826dbd419a310e04aeace97"></script>
+    <script src="js/script.js?v=3a8288c2394babe79e49305fb1d5022e"></script>
     <!-- END scripts -->
   </body>
 

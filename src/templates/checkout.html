@@ -11,6 +11,16 @@ title: Galactictshirts | Checkout
     {% include "partials/header.html" %}
 
     <div class="box">
+      <div class="total">
+        <div class="total__title">Total to pay</div>
+        <div class="total__price">£ 150.00</div>
+        <div class="total__time">
+          Requested on <time datetime="2020-10-10">10/10/20</time>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
       <div class="customer customer_name">
         <div class="customer__title">Customer</div>
         <div class="customer__container">
@@ -127,16 +137,15 @@ title: Galactictshirts | Checkout
       </div>
     </div>
 
-    <div class="section">
+    <div class="box">
       <div class="caption">
         <div class="caption__content">
           <h2 class="title">Checkout</h2>
-          <time class="time" datetime="2019-07-20 15:45">20th July 2019 at 3.45pm</time>
         </div>
       </div>
       <div class="products">
 
-        <div class="product">
+        <div class="product product_no-img">
           <div class="product__side">
             <div class="product__img-wrap">
               <img class="product__img" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="R1 T-shirt White">
@@ -163,12 +172,12 @@ title: Galactictshirts | Checkout
             </div>
             <div class="info__column info__column_price">
               <div class="info__title">Price</div>
-              <div class="info__value">£9999.00</div>
+              <div class="info__value">£  9999.00</div>
             </div>
           </div>
         </div>
 
-        <div class="product">
+        <div class="product product_no-img">
           <div class="product__side">
             <div class="product__img-wrap">
               <img class="product__img" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="R1 Shoes White">
@@ -195,11 +204,11 @@ title: Galactictshirts | Checkout
             </div>
             <div class="info__column info__column_price">
               <div class="info__title">Price</div>
-              <div class="info__value">£135.00</div>
+              <div class="info__value">£ 935.00</div>
             </div>
           </div>
         </div>
-        <div class="product">
+        <div class="product product_no-img">
           <div class="product__side">
             <div class="product__img-wrap">
               <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="3-Stripes Leggings">
@@ -224,17 +233,13 @@ title: Galactictshirts | Checkout
                 </div>
               </div>
             </div>
-            <div class="info__column info__column_discount">
-              <div class="info__title">Discount 10%</div>
-              <div class="info__value info__value_discount">£15.00</div>
-            </div>
             <div class="info__column info__column_price">
               <div class="info__title">Price</div>
-              <div class="info__value">£135.00</div>
+              <div class="info__value">£ 135.00</div>
             </div>
           </div>
         </div>
-        <div class="product">
+        <div class="product product_no-img">
           <div class="product__side">
             <div class="product__img-wrap">
               <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="3-Stripes Leggings">
@@ -259,61 +264,44 @@ title: Galactictshirts | Checkout
                 </div>
               </div>
             </div>
-            <div class="info__column info__column_discount">
-              <div class="info__title">Discount 70%</div>
-              <div class="info__value info__value_discount">£150.00</div>
-            </div>
             <div class="info__column info__column_price">
               <div class="info__title">Price</div>
-              <div class="info__value">£9999.00</div>
+              <div class="info__value">£&nbsp;9999.00</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bottom">
-        <div class="bottom__base">
-          <div class="note">
-            <h4 class="note__title">Note</h4>
-            <div class="note__content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bottom__side">
-          <div class="price">
+      <div class="box">
+        <div class="price">
             <div class="price__title">Subtotal</div>
             <div class="price__cell">
               <div class="price__row">
-                <span class="price__symbol">£</span>
+                <span class="price__symbol">£&nbsp;</span>
                 <div class="price__value">135.00</div>
               </div>
             </div>
             <div class="price__title">Delivery</div>
             <div class="price__cell">
               <div class="price__row">
-                <span class="price__symbol">£</span>
+                <span class="price__symbol">£&nbsp;</span>
                 <div class="price__value">15.00</div>
               </div>
             </div>
             <div class="price__title price__title_total">Total</div>
             <div class="price__cell price__cell_total">
               <div class="price__row">
-                <span class="price__symbol">£</span>
+                <span class="price__symbol">£&nbsp;</span>
                 <div class="price__value">150.00</div>
               </div>
               <div class="price__note">(inc VAT)</div>
             </div>
           </div>
-        </div>
       </div>
     </div>
 
     <div class="pay">
       <a href="#" class="btn btn_pay">
-        <svg class="btn__icon" width="107" height="67">
+        <svg class="btn__icon" width="99" height="38">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprite.svg#icon-apple-pay"></use>
         </svg>
       </a>

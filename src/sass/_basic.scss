@@ -64,13 +64,13 @@ input:invalid {
 
 
 // Main styles
-html {
+html,
+body {
 	height: 100%;
 }
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	position: relative;
 	font-family: $font-family;
 	font-size: $font-size;
@@ -80,8 +80,4 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	background-color: #f8f8f8;
-
-	@media (max-width: $screen-md) {
-		background-color: $white;
-	}
 }

@@ -6,14 +6,15 @@ $fontPath: '../fonts';
 
 // site colors
 $white: #fff;
-$black: #363639;
+$black: #000;
+$dark: #363639;
 $blue: #1d83ff;
 $gray: #7F7F85;
 $gray-light: #F6F6F6;
 $gray-icon: #A9A9A9;
 
 // text colors
-$text-color: $black;
+$text-color: $dark;
 
 // other
 $line-color: #F3F3F3;

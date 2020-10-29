@@ -32,13 +32,13 @@ function renderHtml(onlyChanged) {
             preserve_newlines: false,
             end_with_newline: true
         }))
-		.pipe(version({
-			'value': '%MDS%',
-			'append': {
-				'key': 'v',
-				'to': ['css', 'js'],
-			}
-		}))
+        .pipe(version({
+          'value': '%MDS%',
+          'append': {
+            'key': 'v',
+            'to': ['css', 'js'],
+          }
+        }))
         .pipe(gulp.dest(config.dest.html));
 }
 
